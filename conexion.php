@@ -1,8 +1,8 @@
 <?php
-    $servername = 'viaduct.proxy.rlwy.net';
-    $username = 'root';
-    $password = 'hCC3EfDfAg4aHACgad1C4bCc1hdcD1C3';
-    $dbname = 'railway';
+    $servername = 'http://srv871.hstgr.io';
+    $username = 'u524156408_backendteam';
+    $password = 'LaBarbada1979';
+    $dbname = 'u524156408_labarbadadev';
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
