@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = mysqli_real_escape_string($conn, $data->password);
     $usuario = mysqli_real_escape_string($conn, $data->usuario);
 
-    $sql = "SELECT * FROM registro WHERE correo='$email' AND contrasenia ='$password' AND id_rol='$usuario'";
+    $sql = "SELECT * FROM tbl_usuarios WHERE vch_correo='$email' AND vch_contraseña ='$password' AND id_rol='$usuario'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
