@@ -5,10 +5,10 @@ header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json");
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "telesecundaria";
+$servername = 'http://srv871.hstgr.io';
+$username = 'u524156408_backendteam';
+$password = 'LaBarbada1979';
+$dbname = 'u524156408_labarbadadev';
 
 $data = json_decode(file_get_contents('php://input'), true);
 $contrasenia = $data['contrasenia'];
@@ -18,7 +18,7 @@ if ($conn->connect_error) {
     die(json_encode(array('error' => true, 'message' => 'Error de conexión a la base de datos')));
 }
 
-$consultaUsuario = "UPDATE registro SET contrasenia = '$contrasenia'";
+$consultaUsuario = "UPDATE tbl_usuarios SET vch_contraseña = '$contrasenia'";
 $resultadoUsuario = $conn->query($consultaUsuario);
 
 if ($resultadoUsuario) {
