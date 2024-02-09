@@ -5,10 +5,10 @@ header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json");
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "telesecundaria";
+$servername = 'http://srv871.hstgr.io';
+$username = 'u524156408_backendteam';
+$password = 'LaBarbada1979';
+$dbname = 'u524156408_labarbadadev';
 
 $data = json_decode(file_get_contents('php://input'), true);
 $correo = $data['correo'];
